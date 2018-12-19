@@ -2,7 +2,7 @@ feign:
     hystrix:
         enabled: false
 
-greetings:
+greetingsClient:
     ribbon:
         listOfServers: http://localhost:8080
 

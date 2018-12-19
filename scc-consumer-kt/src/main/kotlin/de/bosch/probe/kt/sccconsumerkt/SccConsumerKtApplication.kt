@@ -48,7 +48,7 @@ class SccConsumerKtApplication(val helloClient: HelloClient) : CommandLineRunner
 data class GreetingDao(val name: String, val hello: String, val time: LocalDateTime)
 
 
-@FeignClient(name = "greetings")
+@FeignClient(name = "greetingsClient")
 @RequestMapping("/greeting", produces = arrayOf(org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE))
 interface HelloClient {
     @GetMapping

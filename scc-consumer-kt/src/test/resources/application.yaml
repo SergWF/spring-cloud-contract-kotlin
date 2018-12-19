@@ -1,0 +1,6 @@
+stubrunner:
+  idsToServiceIds:
+    scc-producer-kt: greetingsClient
+
+logging:
+  level.root: warn

@@ -1,6 +1,6 @@
 request:
   method: POST
-  url: /greeting/?name=john
+  url: /greeting?name=john
 response:
   status: 200
   body:
