@@ -1,0 +1,14 @@
+feign:
+    hystrix:
+        enabled: false
+
+greetings:
+    ribbon:
+        listOfServers: http://localhost:8080
+
+spring:
+    main:
+        banner-mode: "off"
+
+logging:
+    level.root: warn
