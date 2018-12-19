@@ -1,0 +1,17 @@
+request:
+  method: GET
+  url: /greeting
+response:
+  status: 200
+  body:
+    - name: "john"
+      hello: "hello"
+      time: "2018-12-12T10:45:55"
+    - name: "jane"
+      hello: "Hi"
+      time: "2018-12-12T11:45:55"
+    - name: "ken"
+      hello: "Hallo"
+      time: "2018-12-12T12:45:55"
+  headers:
+    Content-Type: application/json;charset=UTF-8

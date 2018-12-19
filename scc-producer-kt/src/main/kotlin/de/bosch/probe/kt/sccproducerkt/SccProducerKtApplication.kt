@@ -1,5 +1,6 @@
 package de.bosch.probe.kt.sccproducerkt
 
+import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.stereotype.Service
@@ -18,7 +19,7 @@ data class Greeting(val name: String, val hello: String, val time: LocalDateTime
 
 @RestController
 @RequestMapping("/greeting", produces = arrayOf(org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE))
-class GreetingController(val greetingService: GreetingService) {
+class GreetingController(val greetingService: GreetingService, val objectMapper: ObjectMapper) {
 
 
 
@@ -29,6 +30,9 @@ class GreetingController(val greetingService: GreetingService) {
 
     @PostMapping
     fun hello(@RequestParam name: String) : Greeting {
+        println("++++++++++++++++++++++++++")
+        println(objectMapper.writeValueAsString(greetingService.sayHello(name)))
+        println("++++++++++++++++++++++++++")
         return greetingService.sayHello(name)
     }
 }
