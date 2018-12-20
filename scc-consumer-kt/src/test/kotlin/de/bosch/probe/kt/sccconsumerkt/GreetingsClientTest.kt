@@ -3,16 +3,12 @@ package de.bosch.probe.kt.sccconsumerkt
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.cloud.contract.stubrunner.spring.AutoConfigureStubRunner
 import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties
 import java.time.LocalDateTime
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
-@AutoConfigureMockMvc
-@AutoConfigureJsonTesters
 @AutoConfigureStubRunner(
         ids = arrayOf("de.bosch.probe.kt:scc-producer-kt:+:stubs:8090"),
         stubsMode = StubRunnerProperties.StubsMode.LOCAL)
